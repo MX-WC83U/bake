@@ -29,3 +29,4 @@ run_or_exit() {
 
 run_or_exit installation 
 run_or_exit rust
+run_or_exit repo
