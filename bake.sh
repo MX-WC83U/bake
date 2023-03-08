@@ -5,12 +5,14 @@ installation() {
 
 rust() {
   curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly -y
+  source "$HOME/.cargo/env"
 }
 
-
-
-
-
+repo() {
+  git clone https://github.com/broomshed/musical-umbrella &&
+  cd musical-umbrella &&
+  cargo run --release 
+}
 
 run_or_exit() {
   command=$1
