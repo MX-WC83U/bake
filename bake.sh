@@ -1,8 +1,9 @@
 installation() {
-  apt update && apt upgrade -y &&
-  apt install neofetch pip curl git nano micro build-essential libssl-dev pkg-config cmake -y &&
+  sudo apt update && sudo apt upgrade -y &&
+  sudo apt install neofetch pip curl git nano micro build-essential libssl-dev pkg-config cmake -y &&
   echo -e "\n alias md='neofetch memory disk' \n alias ns='neofetch --stdout' \n alias crr='cargo run --release' \n alias cbr='cargo build --release' " >> ~/.bashrc &&
-  source ~/.bashrc 
+  source ~/.bashrc &&
+  sudo bash -c "echo 'kernel.hostname = engn' >> /etc/sysctl.conf"
 }
 
 rust() {
