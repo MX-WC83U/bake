@@ -12,7 +12,7 @@ rust() {
 }
 
 docker() {
-  curl -fsSL https://get.docker.com -o get-docker.sh
+  curl -fsSL https://get.docker.com -o get-docker.sh &&
   sh get-docker.sh
 
 
@@ -33,4 +33,4 @@ run_or_exit() {
 
 run_or_exit installation 
 run_or_exit rust
-run_or_exit repo
+run_or_exit docker
