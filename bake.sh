@@ -11,10 +11,11 @@ rust() {
   source "$HOME/.cargo/env"
 }
 
-repo() {
-  git clone https://github.com/broomshed/musical-umbrella &&
-  cd musical-umbrella &&
-  cargo run --release 
+docker() {
+  curl -fsSL https://get.docker.com -o get-docker.sh
+  sh get-docker.sh
+
+
 }
 
 run_or_exit() {
